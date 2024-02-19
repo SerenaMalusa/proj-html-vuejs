@@ -1,13 +1,23 @@
 <script>
+  // import components 
+  import AppHeader from './components/AppHeader.vue';
+
   export default {
-    
+    data() {
+      return {
+
+      }
+    },
+    components: {
+      AppHeader,
+    },
   }
 </script>
 
 <template>
-  <div>
+  
+  <app-header/>
 
-  </div>
 </template>
 
 <style lang="scss">
