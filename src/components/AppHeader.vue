@@ -5,11 +5,11 @@
 </script>
 
 <template>
-  <div class="wrapper d-flex justify-content-between align-items-end mt-4 debug">
+  <div class="wrapper d-flex justify-content-between align-items-end debug">
     
-    <a class="debug h4 text-serif mb-0" href="#">Everlead<b class="text-secondary">.</b></a>
+    <a class="h4 text-serif mb-0" href="#">Everlead<b class="text-secondary">.</b></a>
 
-    <nav class="debug">
+    <nav>
       <ul class="d-flex mb-0">
         <li class="text-uppercase ms-4">Lorem</li>
         <li class="text-uppercase ms-4">Lorem</li>
@@ -30,6 +30,12 @@
     // import varibales and mixins
     @use '../styles/partials/variables.scss' as *;
     @use '../styles/partials/mixins.scss' as *;
+
+    .wrapper {
+      height: $header-h;
+      position: relative;
+      z-index: 1;
+    }
 
 
 </style>
