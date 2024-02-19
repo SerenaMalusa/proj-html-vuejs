@@ -14,8 +14,8 @@
         <div class="wrapper">
 
             <div class="slider-arrows">
-                <div class="arrow"></div>
-                <div class="arrow"></div>
+                <img class="arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
+                <img class="arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
             </div>
 
             <div class="wrapper small debug"></div>
@@ -41,10 +41,32 @@
             width: 100%;
             height: 100%; 
 
+            position: absolute;
+            z-index: -1;
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+        }
+
+        .wrapper {
+            height: 100%;
+            position: relative;
+            .arrow {
+                filter: invert(100%);
+
+                position: absolute;
+                top: 50%;
+
+                &.arrow-right {
+                    left: 100%;
+                }
+
+                &.arrow-left {
+                    transform: rotate(180deg);
+                }
             }
         }
     }
