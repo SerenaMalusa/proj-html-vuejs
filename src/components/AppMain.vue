@@ -1,16 +1,16 @@
 <script>
-  export default {
-    
-  }
+    export default {
+        
+    }
 </script>
 
 <template>
-  <div>
-    Header
-  </div>
+    <div>
+        Main
+    </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
     // import varibales and mixins
     @use '../styles/partials/variables.scss' as *;
