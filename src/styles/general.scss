@@ -41,11 +41,12 @@ a {
 }
 
 // UTILITY
-.wrapper {
+.container_l {
     margin: 0 auto;
     width: 90%;
 }
 
-.wrapper.small {
+.container_s {
+    margin: 0 auto;
     width: 75%;
 }

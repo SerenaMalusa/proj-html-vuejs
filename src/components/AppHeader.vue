@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <div class="wrapper d-flex justify-content-between align-items-end debug">
+  <div class="container_l d-flex justify-content-between align-items-end debug">
     
     <a class="h4 text-serif mb-0" href="#">Everlead<b class="text-secondary">.</b></a>
 
@@ -31,8 +31,8 @@
     @use '../styles/partials/variables.scss' as *;
     @use '../styles/partials/mixins.scss' as *;
 
-    .wrapper {
-      height: $header-h;
+    .container_l {
+      // height: $header-h;
       position: relative;
       z-index: 1;
     }
