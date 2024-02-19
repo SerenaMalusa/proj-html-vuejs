@@ -2,5 +2,46 @@
 @use './partials/variables.scss' as *; 
 @use './partials/mixins.scss' as *;
 
+// Bootstrap variable overrides
+$primary: #1e1e1e;
+$secondary: #fe4611;
+$info: #bfbfbf;
 // Import Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
+
+
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+.text-serif {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+// RESET AND GENERAL RULES
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+// DEBUG
+.debug {
+    border: 1px solid blueviolet;
+}
+
+// UTILITY
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+}
