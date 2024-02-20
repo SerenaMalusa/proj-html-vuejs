@@ -76,7 +76,18 @@
         </section>
         <!-- END SECTION SPECIALTIES  -->
 
+        <!-- SECTION FOUNDER -->
+        <section id="founder">
 
+            <div class="container-l">
+
+                <img class="section-deco" src="../assets/svg/svg-4.svg" alt="decoration" >
+
+                <div class="container-s debug">
+
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -87,7 +98,7 @@
     @use '../styles/partials/mixins.scss' as *;
 
     .wrapper {
-        background-color: ;
+        background-color: $main-bg;
 
         .back-arrow {
             border-radius: 50%;
@@ -172,6 +183,18 @@
                 position: relative;
                 top: calc(-2 * $header-h);
             }
+    }
+
+    #founder {
+        .container-l {
+            position: relative;
+        }
+        .section-deco {
+            width: 380px;
+            position: absolute;
+            top: -70px;
+            right: 0;
+        }
     }
 
 </style>
