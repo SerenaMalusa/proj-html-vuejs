@@ -73,10 +73,18 @@
                     <div 
                     v-for="slide in slides" 
                     :class="(slide != activeSlide) ? 'd-none' : ''"
-                    class="col-6"
+                    class="col-6 slide-content"
                     >
-                        <h2 class="text-serif h1">{{ slide.title }}<b class="text-secondary">.</b></h2>
-                        <p class="text-info">{{ slide.text }}</p>
+                        <section-title 
+                        :title="slide.title"
+                        :text="slide.text"
+                        :hasFinishDot="true"
+                        :hasDivider="false"
+                        :isTextCentered="false"
+                        >
+                        </section-title>
+                        <!-- <h2 class="text-serif h1">{{ slide.title }}<b class="text-secondary">.</b></h2>
+                        <p class="text-info">{{ slide.text }}</p> -->
                         <app-button @button-clicked="printClick" buttonType="primary" text="read more"/>
                         <app-button v-if="slide.canBePurchased" @button-clicked="printClick" text="purchase" buttonType="secondary"/>
                     </div>
@@ -124,8 +132,8 @@
                 justify-content: flex-start;
                 align-items: center;
 
-                div {
-                    transform: translate(0, 2rem);
+                .slide-content {
+                    transform: translate(0, 85px);
                 }
             }
         }

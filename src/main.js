@@ -21,6 +21,7 @@ import AppSocial from './components/global/AppSocial.vue';
 import AppSearchBar from './components/global/AppSearchBar.vue';
 import AppBackArrow from './components/global/AppBackArrow.vue';
 import AppButton from './components/global/AppButton.vue';
+import SectionTitle from './components/global/SectionTitle.vue';
 
 // use createApp to create the const app then mount it
 const app = createApp(App);
@@ -30,6 +31,7 @@ app
     .component('AppSocial', AppSocial)
     .component('AppSearchBar', AppSearchBar)
     .component('AppBackArrow', AppBackArrow)
-    .component('AppButton', AppButton);
+    .component('AppButton', AppButton)
+    .component('SectionTitle', SectionTitle);
 
 app.mount('#app');
