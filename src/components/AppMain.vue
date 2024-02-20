@@ -1,6 +1,12 @@
 <script>
+
+    // import components
+    import MainHero from './MainHero.vue';
+
     export default {
-        
+        components: {
+            MainHero,
+        }
     }
 </script>
 
@@ -8,36 +14,10 @@
     <div class="wrapper">
 
         <!-- freccina per tornare su -->
-        <!-- <div class="back-arrow">
-            <img class="arrow-top" src="../assets/svg/svg-6.svg" alt="top arrow">
-        </div> -->
         <app-back-arrow />
 
         <!-- SECTION HERO -->
-        <section id="hero">
-            <figure>
-                <img src="../assets/img/rev-slider-main-home-img-03.jpg" alt="#">
-            </figure>
-            
-            <div class="container-l">
-    
-                <div>
-                    <img class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
-                    <img class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
-                </div>
-    
-                <div class="container-s">
-    
-                    <div class=" debug">
-                        <h2 class="text-serif h1">Lorem</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque? Unde.</p>
-                    </div>
-    
-                </div>
-    
-            </div>
-        </section>
-        <!-- END SECTION HERO -->
+        <main-hero />
 
         <!-- SECTION SPECIALTIES  -->
         <section id="specialties">
@@ -241,57 +221,6 @@
 
         .section-padding {
             padding: calc($base-space * 5) 0;
-        }
-
-
-        .slider-arrow {
-            filter: invert(100%);
-
-            position: absolute;
-            top: 50%;
-
-            &.arrow-right {
-                right:  0;
-            }
-
-        }
-    }
-
-    #hero {        
-        height: 100vh;
-
-        position: relative;
-        top: calc(-1 * $header-h);
-        z-index: 0;
-
-        figure {
-            width: 100%;
-            height: 100%; 
-
-            position: absolute;
-            z-index: -1;
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .container-l {
-            height: 100%;
-            position: relative;
-
-            .container-s {
-                height: 100%;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-
-                div {
-                    transform: translate(0, 2rem);
-                }
-            }
         }
 
     }

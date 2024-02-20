@@ -10,15 +10,15 @@
 
 <template>
     <div @click="backToTop()" class="back-arrow">
-            <img class="arrow-top" src="../assets/svg/svg-6.svg" alt="top arrow">
+            <img class="arrow-top" src="../../assets/svg/svg-6.svg" alt="top arrow">
     </div>
 </template>
 
 <style lang="scss" scoped>
 
     // import varibales and mixins
-    @use '../styles/partials/variables.scss' as *;
-    @use '../styles/partials/mixins.scss' as *;
+    @use '../../styles/partials/variables.scss' as *;
+    @use '../../styles/partials/mixins.scss' as *;
     .back-arrow {
         border-radius: 50%;
         padding-left: 1px;

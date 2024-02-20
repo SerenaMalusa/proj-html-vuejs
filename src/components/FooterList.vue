@@ -1,7 +1,5 @@
 <script>
 
-    import AppSocial from './AppSocial.vue';
-
     export default {
         data () {
             return {
@@ -11,9 +9,7 @@
         props: {
             link: Object,
         },
-        components: {
-            AppSocial,
-        },
+        
     }
 </script>
 
@@ -28,7 +24,7 @@
             </div>
             <a :href="listItem.link" class="text-info">{{ listItem.text }}</a>
         </div>
-        <slot></slot>
+        <slot v-if="link.extraComponent"></slot>
 
     </div>
 </template>

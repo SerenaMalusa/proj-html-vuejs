@@ -64,3 +64,19 @@ ul {
 .arrow-left {
     transform: rotate(180deg);
 }
+
+.slider-arrow {
+    filter: invert(100%);
+
+    position: absolute;
+    top: 50%;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.arrow-right {
+        right:  0;
+    }
+
+}

@@ -17,9 +17,9 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 library.add( faTwitter, faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars );
 
 // import globall components
-import AppSocial from './components/AppSocial.vue';
-import AppSearchBar from './components/AppSearchBar.vue';
-import AppBackArrow from './components/AppBackArrow.vue';
+import AppSocial from './components/global/AppSocial.vue';
+import AppSearchBar from './components/global/AppSearchBar.vue';
+import AppBackArrow from './components/global/AppBackArrow.vue';
 
 // use createApp to create the const app then mount it
 const app = createApp(App);
