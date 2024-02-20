@@ -4,8 +4,36 @@
             return {
                 sectionTitle: 'Our specialties',
                 sectionText: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas!',
+                skills: [
+                    {
+                        title: 'Knowing',
+                        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                        imgName: 'svg-0.svg',
+                    },
+                    {
+                        title: 'Selling',
+                        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                        imgName: 'svg-1.svg',
+                    },
+                    {
+                        title: 'Learning',
+                        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                        imgName: 'svg-2.svg',
+                    },
+                    {
+                        title: 'Contact',
+                        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+                        imgName: 'svg-3.svg',
+                    },
+                ],
             }
-        }
+        },
+        methods: {
+            getSvgPath(item) {
+                const url = new URL ('../assets/svg/' + item.imgName, import.meta.url);
+                return url;
+            }
+        },
     }
 </script>
 
@@ -21,35 +49,27 @@
                     <section-title 
                     :title="sectionTitle"
                     :text="sectionText"
-                    titleSize="h3"
+                    titleSize="h2"
                     :hasFinishDot="true"
                     :hasDivider="true"
                     :isTextCentered="true"
                     id="title"
                     />
         
-                    <div class="skills debug d-flex justify-content-between gap-4 debug">
-                        <div class="skill text-center col-3 debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
+                    <div class="skills d-flex justify-content-between">
+                        <!-- <div class="skill text-center col-3">
+                            <img class="mb-4" src="../assets/svg/svg-1.svg" alt="#">
                             <h6 class="text-serif">Lorem</h6>
                             <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div> -->
+
+                        <div v-for="(skill,i) in skills" :key="i" class="skill text-center col-3">
+                            <img class="mb-4" :src="getSvgPath(skill)" alt="#">
+                            <h6 class="text-serif">{{ skill.title }}</h6>
+                            <p class="text-info">{{ skill.text }}</p>
                         </div>
+
     
-                        <div class="skill text-center debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                        <div class="skill text-center debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                        <div class="skill text-center debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
                     </div>
                 </div>
             </div>
