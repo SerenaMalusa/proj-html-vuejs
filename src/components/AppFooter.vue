@@ -139,7 +139,7 @@
 
                 </div> -->
 
-                <footer-list v-for="link in linkList"></footer-list>
+                <footer-list v-for="link in linkList" :link="link"></footer-list>
 
             </div>
         </div>
@@ -166,21 +166,6 @@
 
         .container-s {
             padding: calc($base-space * 3) 0;
-
-            h6 {
-                margin-bottom: calc($base-space / 1.5);
-            }
-
-            .divider {
-                margin-bottom: calc($base-space / 1.5);
-                width: calc($base-space * 1.5);
-                height: 1px;
-                background-color: $secondary-bg;
-            }
-
-            p {
-                font-size: 0.8rem;
-            }
         }
 
         .copyright {
