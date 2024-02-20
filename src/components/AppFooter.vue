@@ -30,7 +30,7 @@
                                     kitClass: 'brands',
                                     iconClass: 'twitter',
                                 },
-                                text: `<a href="#">@alisadadm</a> Hi <a href="#">@alisadadm</a> can you please submit a ticket at..`,  
+                                text: `@alisadadm Hi @alisadadm can you please submit a ticket at..`,  
                                 link: '',
                             },
                             {
@@ -38,8 +38,8 @@
                                     kitClass: 'brands',
                                     iconClass: 'twitter',
                                 },
-                                text: `<a href="#">@HenrySefaBoaky</a> check out our there Gloia wich has all the necessary elements to build a multi vendor marketplace
-                                <a href="#">https://t.co/c9BIYxZBlI</a>`,  
+                                text: `@HenrySefaBoaky check out our there Gloia wich has all the necessary elements to build a multi vendor marketplace
+                                https://t.co/c9BIYxZBlI`,  
                                 link: '',
                             },
                         ]
