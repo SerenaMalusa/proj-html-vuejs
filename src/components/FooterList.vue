@@ -1,8 +1,19 @@
 <script>
+
+    import AppSocial from './AppSocial.vue';
+
     export default {
+        data () {
+            return {
+                
+            }
+        },
         props: {
             link: Object,
-        }
+        },
+        components: {
+            AppSocial,
+        },
     }
 </script>
 
@@ -15,8 +26,9 @@
             <div>
                 <font-awesome-icon v-if="listItem.icon.kitClass" :icon="`fa-${listItem.icon.kitClass} fa-${listItem.icon.iconClass}`" class="icon"/>
             </div>
-            <p class="text-info">{{ listItem.text }}</p>
+            <a :href="listItem.link" class="text-info">{{ listItem.text }}</a>
         </div>
+        <slot></slot>
 
     </div>
 </template>
@@ -39,11 +51,12 @@
     }
 
     .icon {
-        margin-right: 5px;
+        margin-right: calc($base-space / 4);
         color: $secondary-text;
     }
 
-    p {
+    a {
+        margin-bottom: calc($base-space / 2);
         font-size: 0.8rem;
     }
 

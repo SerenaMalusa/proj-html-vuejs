@@ -16,10 +16,14 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 /* add icons to the library */
 library.add( faTwitter, faLocationDot, faPhone, faEnvelope );
 
+// import globall components
+import AppSocial from './components/AppSocial.vue';
 
 // use createApp to create the const app then mount it
 const app = createApp(App);
 // global components
-app.component('font-awesome-icon', FontAwesomeIcon);
+app
+    .component('font-awesome-icon', FontAwesomeIcon)
+    .component('AppSocial', AppSocial);
 
 app.mount('#app');

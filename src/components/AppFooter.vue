@@ -2,6 +2,7 @@
 
     // import components
     import FooterList from './FooterList.vue';
+    // import AppSocial from './AppSocial.vue';
 
     export default {
         data () {
@@ -122,6 +123,7 @@
         },
         components: {
             FooterList,
+            // AppSocial,
         },
     }
 </script>
@@ -139,7 +141,9 @@
 
                 </div> -->
 
-                <footer-list v-for="link in linkList" :link="link"></footer-list>
+                <footer-list v-for="link in linkList" :link="link">
+                    <app-social></app-social>
+                </footer-list>
 
             </div>
         </div>
