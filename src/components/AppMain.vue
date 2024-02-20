@@ -4,40 +4,75 @@
     }
 </script>
 
-<template>
-    <section id="hero">
-        <figure>
-            <img src="../assets/img/rev-slider-main-home-img-03.jpg" alt="#">
-        </figure>
-        
-        <div class="container_l">
+<template> 
+    <div class="wrapper">
 
-            <div class="slider-arrows">
-                <img class="arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
-                <img class="arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
-            </div>
-
-            <div class="container_s debug">
-
-                <div class=" debug">
-                    <h2 class="text-serif h1">Lorem</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque? Unde.</p>
+        <!-- SECTION HERO -->
+        <section id="hero">
+            <figure>
+                <img src="../assets/img/rev-slider-main-home-img-03.jpg" alt="#">
+            </figure>
+            
+            <div class="container-l">
+    
+                <div class="slider-arrows">
+                    <img class="arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
+                    <img class="arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
                 </div>
-
+    
+                <div class="container-s">
+    
+                    <div class=" debug">
+                        <h2 class="text-serif h1">Lorem</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque? Unde.</p>
+                    </div>
+    
+                </div>
+    
             </div>
+        </section>
+        <!-- END SECTION HERO -->
 
-        </div>
-    </section>
-
-    <section id="specialties">
-        <div class="container_l debug">
-            <div class="section-title text-center">
-                <h2 class="text-serif h3 mb-0">Lorem</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque? Unde.</p>
-
+        <!-- SECTION SPECIALTIES  -->
+        <section id="specialties">
+            <div class="container-l">
+    
+                <div class="container-s">
+                    <div class="section-title text-center">
+                        <h2 class="text-serif h3 mb-0">Lorem</h2>
+                        <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque? Unde.</p>
+                    </div>
+        
+                    <div class="skills debug d-flex justify-content-between gap-4 debug">
+                        <div class="skill text-center col-3 debug">
+                            <img src="../assets/svg/svg-1.svg" alt="#">
+                            <h6 class="text-serif">Lorem</h6>
+                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+    
+                        <div class="skill text-center debug">
+                            <img src="../assets/svg/svg-1.svg" alt="#">
+                            <h6 class="text-serif">Lorem</h6>
+                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="skill text-center debug">
+                            <img src="../assets/svg/svg-1.svg" alt="#">
+                            <h6 class="text-serif">Lorem</h6>
+                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                        <div class="skill text-center debug">
+                            <img src="../assets/svg/svg-1.svg" alt="#">
+                            <h6 class="text-serif">Lorem</h6>
+                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <!-- END SECTION SPECIALTIES  -->
+
+
+    </div>
 </template>
 
 <style lang="scss" scoped>
@@ -45,6 +80,10 @@
     // import varibales and mixins
     @use '../styles/partials/variables.scss' as *;
     @use '../styles/partials/mixins.scss' as *;
+
+    .wrapper {
+        background-color: #fafafa;
+    }
 
     #hero {        
         height: 100vh;
@@ -67,7 +106,7 @@
             }
         }
 
-        .container_l {
+        .container-l {
             height: 100%;
             position: relative;
             .arrow {
@@ -86,7 +125,7 @@
                 }
             }
 
-            .container_s {
+            .container-s {
                 height: 100%;
                 display: flex;
                 justify-content: flex-start;
@@ -101,8 +140,7 @@
     }
 
     #specialties {
-            
-            .container_l {
+            .container-l {
                 background-color:#ffffff;
                 position: relative;
                 top: calc(-2 * $header-h);

@@ -22,7 +22,7 @@
   
   <app-header />
 
-  <app-main id="main"/>
+  <app-main/>
 
   <app-footer />
 
@@ -32,9 +32,5 @@
 
   // import file general.scss
   @use  './styles/general.scss';
-
-  #main {
-    background-color: #b6e0f0;
-  }
 
 </style>
