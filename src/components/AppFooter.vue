@@ -1,6 +1,121 @@
 <script>
     export default {
-        
+        data () {
+            return {
+                linkList:  [
+                    {
+                        title: 'About',
+                        listItems: [
+                            {
+                                icon: {
+                                    kitClass: '',
+                                    iconClass: '',
+                                },
+                                text: 'We creted Everlead to effectively become the stepping stone towards meeting all your goals & achieving business success',  
+                                link: '',
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Twitter',
+                        listItems: [
+                            {
+                                icon: {
+                                    kitClass: 'brands',
+                                    iconClass: 'twitter',
+                                },
+                                text: `<a href="#">@alisadadm</a> Hi <a href="#">@alisadadm</a> can you please submit a ticket at..`,  
+                                link: '',
+                            },
+                            {
+                                icon: {
+                                    kitClass: 'brands',
+                                    iconClass: 'twitter',
+                                },
+                                text: `<a href="#">@HenrySefaBoaky</a> check out our there Gloia wich has all the necessary elements to build a multi vendor marketplace
+                                <a href="#">https://t.co/c9BIYxZBlI</a>`,  
+                                link: '',
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Important Links',
+                        listItems: [
+                            {
+                                icon: {
+                                    kitClass: '',
+                                    iconClass: '',
+                                },
+                                text: 'About me',  
+                                link: '#',
+                            },
+                            {
+                                icon: {
+                                    kitClass: '',
+                                    iconClass: '',
+                                },
+                                text: 'About us',  
+                                link: '#',
+                            },
+                            {
+                                icon: {
+                                    kitClass: '',
+                                    iconClass: '',
+                                },
+                                text: 'Lenguage packs',  
+                                link: '#',
+                            },
+                            {
+                                icon: {
+                                    kitClass: '',
+                                    iconClass: '',
+                                },
+                                text: 'Become a coach',  
+                                link: '#',
+                            },
+                            {
+                                icon: {
+                                    kitClass: '',
+                                    iconClass: '',
+                                },
+                                text: 'Monthly events',  
+                                link: '#',
+                            },
+                        ]
+                    },
+                    {
+                        title: 'Contact me',
+                        listItems: [
+                            {   
+                                icon: {
+                                    kitClass: 'solid',
+                                    iconClass: 'location-dot',
+                                },
+                                text: '457 BigBlue Street, NY 10013',  
+                                link: '#',
+                            },
+                            {
+                                icon: {
+                                    kitClass: 'solid',
+                                    iconClass: 'phone',
+                                },
+                                text: '(315) 5512 - 2579',  
+                                link: '#',
+                            },
+                            {
+                                icon: {
+                                    kitClass: 'solid',
+                                    iconClass: 'envelope',
+                                },
+                                text: 'everlead@mikado.com',  
+                                link: '#',
+                            },
+                        ]
+                    },
+
+                ],
+            }
+        },
     }
 </script>
 
