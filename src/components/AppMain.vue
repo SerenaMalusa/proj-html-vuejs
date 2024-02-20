@@ -7,6 +7,11 @@
 <template> 
     <div class="wrapper">
 
+        <!-- freccina per tornare su -->
+        <div class="back-arrow">
+            <img class="arrow-top" src="../assets/svg/svg-6.svg" alt="top arrow">
+        </div>
+
         <!-- SECTION HERO -->
         <section id="hero">
             <figure>
@@ -82,7 +87,28 @@
     @use '../styles/partials/mixins.scss' as *;
 
     .wrapper {
-        background-color: #fafafa;
+        background-color: ;
+
+        .back-arrow {
+            border-radius: 50%;
+            padding-left: 1px;
+            width:30px;
+            aspect-ratio: 1;
+            background-color: $highlight-bg;
+            text-align: center;
+
+            position: fixed;
+            bottom: $base-space;
+            right: $base-space;
+            z-index: 2;
+            
+            .arrow-top {
+                width: 25px;
+                transform: rotate(-90deg);
+                filter: brightness(0) saturate(100%) invert(38%) sepia(42%) saturate(4896%) hue-rotate(351deg) brightness(99%) contrast(105%);
+            }
+
+        }
     }
 
     #hero {        
@@ -142,7 +168,7 @@
     #specialties {
             .container-l {
                 padding: calc($header-h * 1.5) 0;
-                background-color:#ffffff;
+                background-color: $highlight-bg;
                 position: relative;
                 top: calc(-2 * $header-h);
             }
