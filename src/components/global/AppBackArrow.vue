@@ -22,7 +22,7 @@
     .back-arrow {
         border-radius: 50%;
         padding-left: 1px;
-        width:30px;
+        width: 30px;
         aspect-ratio: 1;
         background-color: $highlight-bg;
         text-align: center;

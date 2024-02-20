@@ -35,18 +35,18 @@
     button {
         margin-right: $base-space;
         border-radius: 0;
-        padding: 3px 20px;
-        height: 50px;
+        padding: calc($base-space / 6.7) $base-space;
+        height: calc($base-space * 2.5);
         font-size: 0.7rem;
         font-weight: 600;
 
         a {
             margin-right: calc($base-space / 2);
-            padding: 8px 15px;
+            padding: calc($base-space / 2.5) calc($base-space / 1.4);
         }
 
         img {
-            height: 25px;
+            height: calc($base-space * 1.25);
         }
 
         &.primary {

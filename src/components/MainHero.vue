@@ -133,7 +133,7 @@
                 align-items: center;
 
                 .slide-content {
-                    transform: translate(0, 85px);
+                    transform: translate(0, calc($base-space * 4));
                 }
             }
         }
