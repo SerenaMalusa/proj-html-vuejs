@@ -19,6 +19,7 @@ library.add( faTwitter, faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, f
 // import globall components
 import AppSocial from './components/AppSocial.vue';
 import AppSearchBar from './components/AppSearchBar.vue';
+import AppBackArrow from './components/AppBackArrow.vue';
 
 // use createApp to create the const app then mount it
 const app = createApp(App);
@@ -26,6 +27,7 @@ const app = createApp(App);
 app
     .component('font-awesome-icon', FontAwesomeIcon)
     .component('AppSocial', AppSocial)
-    .component('AppSearchBar', AppSearchBar);
+    .component('AppSearchBar', AppSearchBar)
+    .component('AppBackArrow', AppBackArrow);
 
 app.mount('#app');

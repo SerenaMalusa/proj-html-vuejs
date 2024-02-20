@@ -101,7 +101,11 @@
       height: $header-h;
       position: relative;
       z-index: 1;
-    }
 
+      img {
+        width: 120px;
+        margin-bottom: 5px;
+      }
+    }
 
 </style>

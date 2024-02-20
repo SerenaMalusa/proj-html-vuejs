@@ -59,11 +59,6 @@
         width: auto;
         filter: brightness(0) saturate(100%) invert(44%) sepia(95%) saturate(4667%) hue-rotate(354deg) brightness(101%) contrast(99%);
     }
-        
-    img {
-        width: 120px;
-        margin-bottom: 5px;
-    }
 
     a {
         font-size: 0.9rem;
