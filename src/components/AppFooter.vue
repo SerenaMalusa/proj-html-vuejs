@@ -2,7 +2,6 @@
 
     // import components
     import FooterList from './FooterList.vue';
-    // import AppSocial from './AppSocial.vue';
 
     export default {
         data () {
@@ -10,6 +9,7 @@
                 linkList:  [
                     {
                         title: 'About',
+                        extraComponent: 'AppSocial',
                         listItems: [
                             {
                                 icon: {
@@ -23,6 +23,7 @@
                     },
                     {
                         title: 'Twitter',
+                        extraComponent: '',
                         listItems: [
                             {
                                 icon: {
@@ -45,6 +46,7 @@
                     },
                     {
                         title: 'Important Links',
+                        extraComponent: '',
                         listItems: [
                             {
                                 icon: {
@@ -90,6 +92,7 @@
                     },
                     {
                         title: 'Contact me',
+                        extraComponent: 'AppSearchBar',
                         listItems: [
                             {   
                                 icon: {
@@ -119,11 +122,11 @@
                     },
 
                 ],
+
             }
         },
         components: {
             FooterList,
-            // AppSocial,
         },
     }
 </script>
@@ -142,7 +145,8 @@
                 </div> -->
 
                 <footer-list v-for="link in linkList" :link="link">
-                    <app-social></app-social>
+                    <!-- <app-social></app-social> -->
+                    <component :is="link.extraComponent"></component>
                 </footer-list>
 
             </div>

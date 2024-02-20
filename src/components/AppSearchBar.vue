@@ -6,7 +6,7 @@
 
 <template>
     <div>
-        Social List
+        Cerca
     </div>
 </template>
 
