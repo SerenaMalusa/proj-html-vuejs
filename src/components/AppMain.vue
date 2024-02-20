@@ -141,6 +141,7 @@
 
     #specialties {
             .container-l {
+                padding: calc($header-h * 1.5) 0;
                 background-color:#ffffff;
                 position: relative;
                 top: calc(-2 * $header-h);
