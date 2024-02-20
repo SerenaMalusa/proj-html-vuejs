@@ -8,12 +8,12 @@
     <div>
         
         <div class="container-l">
-            <div class="container-s d-flex gap-2">
+            <div class="container-s d-flex gap-3">
                 <div>
 
                     <h6 class="text-serif">About</h6>
                     <div class="divider"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloremque animi exercitationem iusto pariatur distinctio accusamus culpa dicta neque! Qui!</p>
+                    <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloremque animi exercitationem iusto pariatur distinctio accusamus culpa dicta neque! Qui!</p>
 
                 </div>
 
@@ -62,12 +62,21 @@
         }
 
         .container-s {
-            padding: 60px 0;
+            padding: calc($base-space * 3) 0;
+
+            h6 {
+                margin-bottom: calc($base-space / 1.5);
+            }
 
             .divider {
-                background-color: $secondary-bg;
-                width: 30px;
+                margin-bottom: calc($base-space / 1.5);
+                width: calc($base-space * 1.5);
                 height: 1px;
+                background-color: $secondary-bg;
+            }
+
+            p {
+                font-size: 0.8rem;
             }
         }
 
