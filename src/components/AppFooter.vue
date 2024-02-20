@@ -1,4 +1,8 @@
 <script>
+
+    // import components
+    import FooterList from './FooterList.vue';
+
     export default {
         data () {
             return {
@@ -116,6 +120,9 @@
                 ],
             }
         },
+        components: {
+            FooterList,
+        },
     }
 </script>
 
@@ -124,35 +131,16 @@
         
         <div class="container-l">
             <div class="container-s d-flex gap-3">
-                <div>
+                <!-- <div>
 
                     <h6 class="text-serif">About</h6>
                     <div class="divider"></div>
                     <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloremque animi exercitationem iusto pariatur distinctio accusamus culpa dicta neque! Qui!</p>
 
-                </div>
+                </div> -->
 
-                <div>
-                    
-                    <h6 class="text-serif">About</h6>
-                    <div class="divider"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloremque animi exercitationem iusto pariatur distinctio accusamus culpa dicta neque! Qui!</p>
+                <footer-list v-for="link in linkList"></footer-list>
 
-                </div>
-                <div>
-                    
-                    <h6 class="text-serif">About</h6>
-                    <div class="divider"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloremque animi exercitationem iusto pariatur distinctio accusamus culpa dicta neque! Qui!</p>
-
-                </div>
-                <div>
-                    
-                    <h6 class="text-serif">About</h6>
-                    <div class="divider"></div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloremque animi exercitationem iusto pariatur distinctio accusamus culpa dicta neque! Qui!</p>
-
-                </div>
             </div>
         </div>
 
