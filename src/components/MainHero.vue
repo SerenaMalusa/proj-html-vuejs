@@ -7,11 +7,14 @@
                         title: 'Our team',
                         text: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus quae adipisci sunt voluptatum reprehenderit blanditiis?',
                         imgName: 'rev-slider-main-home-img-03.jpg', 
+                        canBePurchased: true,
+
                     },
                     {
                         title: 'Lorem',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque animi quam veniam dolorum architecto hic?',
                         imgName: 'rev-slider-main-home-img-02.png', 
+                        canBePurchased: false,
                     },
                 ],
                 activeIndex: 0,
@@ -71,6 +74,8 @@
                     >
                         <h2 class="text-serif h1">{{ slide.title }}<b class="text-secondary">.</b></h2>
                         <p class="text-info">{{ slide.text }}</p>
+                        <app-button />
+                        <app-button v-if="slide.canBePurchased" />
                     </div>
     
                 </div>
