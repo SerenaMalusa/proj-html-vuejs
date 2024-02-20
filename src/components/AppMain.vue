@@ -83,7 +83,17 @@
 
                 <img class="section-deco" src="../assets/svg/svg-4.svg" alt="decoration" >
 
-                <div class="container-s debug">
+                <div class="container-s">
+
+                    <div class="member d-flex">
+                        <figure class="member_img col-7 mb-0">
+                            <img src="../assets/img/h1-blog-img-04.jpg" alt="founders member 1">
+                        </figure>
+
+                        <div class="member-info col-6 my-5">
+
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -188,12 +198,20 @@
     #founder {
         .container-l {
             position: relative;
+            padding-bottom: calc($base-space * 4.5);
         }
         .section-deco {
             width: 380px;
             position: absolute;
-            top: -70px;
+            top: calc($base-space * -3.5);
             right: 0;
+        }
+
+
+        .member-info {
+            background-color:  $highlight-bg;
+            position: relative;
+            left: calc($base-space * -5);
         }
     }
 
