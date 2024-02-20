@@ -78,11 +78,11 @@
                         <section-title 
                         :title="slide.title"
                         :text="slide.text"
+                        titleSize="h1"
                         :hasFinishDot="true"
                         :hasDivider="false"
                         :isTextCentered="false"
-                        >
-                        </section-title>
+                        />
                         <!-- <h2 class="text-serif h1">{{ slide.title }}<b class="text-secondary">.</b></h2>
                         <p class="text-info">{{ slide.text }}</p> -->
                         <app-button @button-clicked="printClick" buttonType="primary" text="read more"/>

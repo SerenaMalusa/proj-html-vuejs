@@ -3,6 +3,7 @@
        props: {
         title: String,
         text: String,
+        titleSize: String,
         hasFinishDot: Boolean,
         hasDivider: Boolean,
         isTextCentered: Boolean,
@@ -12,9 +13,9 @@
 
 <template>
     <div :class="(isTextCentered) ? 'text-center' : ''">
-        <h2 class="text-serif h1">{{ title }}<b v-if="hasFinishDot" class="text-secondary">.</b></h2>
+        <h2 :class="titleSize" class="text-serif">{{ title }}<b v-if="hasFinishDot" class="text-secondary">.</b></h2>
         <p class="text-info">{{ text }}</p>
-        <div v-if="hasDivider" class="divider"></div>
+        <div v-if="hasDivider" :class="(isTextCentered) ? 'centered' : ''" class="divider"></div>
     </div>
 </template>
 
@@ -27,9 +28,13 @@
     
     .divider {
         margin-bottom: calc($base-space / 1.5);
-        width: calc($base-space * 1.5);
+        width: calc($base-space * 2.5);
         height: 1px;
         background-color: $secondary-bg;
+
+        &.centered {
+            margin: 0 auto;
+        }
     }
 
 </style>

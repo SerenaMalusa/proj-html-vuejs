@@ -2,10 +2,12 @@
 
     // import components
     import MainHero from './MainHero.vue';
+    import MainSpecialties from './MainSpecialties.vue';
 
     export default {
         components: {
             MainHero,
+            MainSpecialties,
         }
     }
 </script>
@@ -20,42 +22,7 @@
         <main-hero />
 
         <!-- SECTION SPECIALTIES  -->
-        <section id="specialties">
-            <div class="container-l">
-    
-                <div class="container-s">
-                    <div class="section-title text-center">
-                        <h2 class="text-serif h3 mb-0">Lorem</h2>
-                        <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque? Unde.</p>
-                    </div>
-        
-                    <div class="skills debug d-flex justify-content-between gap-4 debug">
-                        <div class="skill text-center col-3 debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-    
-                        <div class="skill text-center debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                        <div class="skill text-center debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                        <div class="skill text-center debug">
-                            <img src="../assets/svg/svg-1.svg" alt="#">
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- END SECTION SPECIALTIES  -->
+        <main-specialties />
 
         <!-- SECTION FOUNDER -->
         <section id="founder">
@@ -223,15 +190,6 @@
             padding: calc($base-space * 5) 0;
         }
 
-    }
-
-    #specialties {
-            .container-l {
-                padding: calc($header-h * 1.5) 0;
-                background-color: $highlight-bg;
-                position: relative;
-                top: calc(-2 * $header-h);
-            }
     }
 
     #founder {
