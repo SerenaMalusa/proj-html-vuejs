@@ -37,6 +37,9 @@
             goToPrevSlide() {
                 this.activeIndex --;
                 if (this.activeIndex < 0) this.activeIndex = this.slides.length - 1;
+            },
+            printClick(buttonText) {
+                console.log('the '+buttonText+' button was clicked!');
             }
         },
     }
@@ -74,8 +77,8 @@
                     >
                         <h2 class="text-serif h1">{{ slide.title }}<b class="text-secondary">.</b></h2>
                         <p class="text-info">{{ slide.text }}</p>
-                        <app-button />
-                        <app-button v-if="slide.canBePurchased" />
+                        <app-button @button-clicked="printClick" buttonType="primary" text="read more"/>
+                        <app-button v-if="slide.canBePurchased" @button-clicked="printClick" text="purchase" buttonType="secondary"/>
                     </div>
     
                 </div>
