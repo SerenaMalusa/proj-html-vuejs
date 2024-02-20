@@ -106,7 +106,7 @@
         <!-- END SECTION FOUNDER -->
 
         <!-- SECTION EVENTS -->
-        <section id="events">
+        <section class="section-padding" id="events">
             <div class="container-l">
                 <div class="container-s">
                     <ul class="col-5">
@@ -158,6 +158,22 @@
                 </div>
             </div>
         </section>
+        <!-- END SECTION EVENTS -->
+
+        <!-- SECTION LEADER -->
+        <section class="section-padding" id="leader">
+            <div class="container-l">
+                <div class="container-s d-flex debug">
+
+                    <div class="col-6">
+                        <h3 class="text-serif">Lorem</h3>
+                     <p class="text-info mb-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis quas dolorum omnis eos totam labore vero sint eligendi maxime? Hic enim ea quidem et commodi illum perferendis dignissimos laborum!</p>
+                        <a href="#">READ MORE</a>
+                    </div>
+                    <div class="col-6 debug"></div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -169,6 +185,10 @@
 
     .wrapper {
         background-color: $main-bg;
+
+        .section-padding {
+            padding: calc($base-space * 5) 0;
+        }
 
         .back-arrow {
             border-radius: 50%;
@@ -258,7 +278,7 @@
     #founder {
         .container-l {
             position: relative;
-            padding-bottom: calc($base-space * 4.5);
+            padding-bottom: calc($base-space * 5);
         }
         .section-deco {
             width: 380px;
@@ -299,8 +319,6 @@
         background-repeat: no-repeat;
 
         .container-s {
-            padding: calc($base-space * 5) 0;
-
             ul {
                 background-color: $main-bg;
 
@@ -340,6 +358,10 @@
 
         }
 
+    }
+
+    #leader {
+        
     }
 
 </style>
