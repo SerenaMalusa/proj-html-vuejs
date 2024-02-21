@@ -1,6 +1,35 @@
 <script>
+
+    //import store
+    import { store } from '../store';
+
     export default {
-        
+        data() {
+            return {
+                store,
+                founders: [
+                    {
+                        imgName: 'h1-img-01.jpg',
+                        name: 'Jason Bickford',
+                        role: 'Founder and Executive Director',
+                        quote: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio qui totam, fuga quaerat amet adipisci eum placeat officia praesentium.',
+                    },
+                    {
+                        imgName: 'h1-img-02.jpg',
+                        name: 'John Smith',
+                        role: 'Founder and',
+                        quote: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio qui totam, fuga quaerat amet adipisci eum placeat officia praesentium.',
+                    },
+                    {
+                        imgName: 'h1-img-03.jpg',
+                        name: 'Pinco Pallo',
+                        role: 'Founder and',
+                        quote: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio qui totam, fuga quaerat amet adipisci eum placeat officia praesentium.',
+                    },
+                ],
+                activeIndex: 0,
+            }
+        },
     }
 </script>
 
@@ -9,13 +38,19 @@
 
         <div class="container-l">
 
-            <img class="section-deco" src="../assets/svg/svg-4.svg" alt="decoration" >
+            <img class="section-deco" src="../assets/svg/svg-4.svg" alt="decoration" >    
 
             <div class="container-s">
 
                 <div class="member d-flex">
                     <figure class="member_img col-7 mb-0">
-                        <img src="../assets/img/h1-blog-img-04.jpg" alt="founders member 1">
+                        <!-- <img src="../assets/img/h1-blog-img-04.jpg" alt="founders member 1"> -->
+                        <img 
+                        v-for="(founder,i) in founders" 
+                        :key="i" :src="store.getPath(founder)" 
+                        :class="i == activeIndex ? '' : 'd-none'"
+                        :alt="`picture of ${founder.name}`"
+                        >
 
                         <div class="arrows">
                             <img class="arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
