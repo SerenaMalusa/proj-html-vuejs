@@ -8,6 +8,7 @@
     import MainLeader from './MainLeader.vue';
     import MainNews from './MainNews.vue';
     import MainTestimonials from './MainTestimonials.vue';
+    import MainVideo from './MainVideo.vue';
 
     export default {
         components: {
@@ -18,6 +19,7 @@
             MainLeader,
             MainNews,
             MainTestimonials,
+            MainVideo,
         }
     }
 </script>
@@ -48,6 +50,9 @@
 
         <!-- SECTION TESTIMONIALS -->
         <main-testimonials />
+
+        <!-- SECTION VIDEO -->
+        <main-video />
 
     </div>
 </template>

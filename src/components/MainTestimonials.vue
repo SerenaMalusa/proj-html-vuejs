@@ -41,6 +41,7 @@
             <app-slider-arrows @right-click="activeIndex = store.goToNext(testimonials,activeIndex)" @left-click="activeIndex = store.goToPrev(testimonials,activeIndex)" />
             
             <div class="container-s d-flex justify-content-center">
+                
                 <div 
                 v-for="(person, i) in testimonials" 
                 :key="i" 
@@ -53,6 +54,7 @@
                     <p>{{ person.quote }}</p>
 
                 </div>
+
             </div>
 
         </div>
