@@ -156,6 +156,13 @@
         components: {
             FooterList,
         },
+        methods: {
+            getEmail(inputEmail) {
+               
+                console.log(`l'utente con email ${inputEmail} vuole iscriversi alla newsletter`)
+            
+            },
+        },
     }
 </script>
 
@@ -174,7 +181,13 @@
 
                 <footer-list v-for="(link,i) in linkList" :key="i" :link="link">
                     <!-- <app-social></app-social> -->
-                    <component v-if="link.extraComponent.props" :is="link.extraComponent.name" :links="link.extraComponent.props.links" :colours="link.extraComponent.props.colours"></component>
+                    <component 
+                    v-if="link.extraComponent.props" 
+                    :is="link.extraComponent.name" 
+                    :links="link.extraComponent.props.links" 
+                    :colours="link.extraComponent.props.colours"
+                    @subscribe="getEmail"
+                    ></component>
                 </footer-list>
 
             </div>
