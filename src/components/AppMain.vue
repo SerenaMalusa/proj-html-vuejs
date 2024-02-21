@@ -28,13 +28,20 @@
         methods: {
             viewCart () {
                 console.log('hai cliccato sul carrello');
+            },
+            refreshPage() {
+                location.reload();
             }
-        }
+        },
+
     }
 </script>
 
 <template> 
     <div class="wrapper">
+
+        <!-- page refresh -->
+        <app-refresh @clicked-refresh="refreshPage"/>
 
         <!-- carrello -->
         <app-cart @clicked-cart="viewCart"/>
