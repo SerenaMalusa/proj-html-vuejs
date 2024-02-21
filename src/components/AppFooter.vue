@@ -4,7 +4,7 @@
     import axios from 'axios';
 
     // import store 
-    import {store} from '../store';
+    import { store } from '../store';
 
     // import components
     import FooterList from './FooterList.vue';
