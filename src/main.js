@@ -23,7 +23,8 @@ import AppBackArrow from './components/global/AppBackArrow.vue';
 import AppButton from './components/global/AppButton.vue';
 import SectionTitle from './components/global/SectionTitle.vue';
 import AppReadMore from './components/global/AppReadMore.vue';
-import AppSliderArrows from './components/global/AppSliderArrows.vue';
+import AppSliderArrows from './components/global/AppSliderArrows.vue'
+import AppCart from './components/global/AppCart.vue';
 
 // use createApp to create the const app then mount it
 const app = createApp(App);
@@ -36,6 +37,7 @@ app
     .component('AppButton', AppButton)
     .component('SectionTitle', SectionTitle)
     .component('AppReadMore', AppReadMore)
-    .component('AppSliderArrows', AppSliderArrows);
+    .component('AppSliderArrows', AppSliderArrows)
+    .component('AppCart', AppCart);
 
 app.mount('#app');

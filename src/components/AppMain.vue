@@ -24,12 +24,20 @@
             MainVideo,
             MainContacts,
             MainLogos,
+        },
+        methods: {
+            viewCart () {
+                console.log('hai cliccato sul carrello');
+            }
         }
     }
 </script>
 
 <template> 
     <div class="wrapper">
+
+        <!-- carrello -->
+        <app-cart @clicked-cart="viewCart"/>
 
         <!-- freccina per tornare su -->
         <app-back-arrow />
