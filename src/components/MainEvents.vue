@@ -1,29 +1,43 @@
 <script>
+
+    // import store
+    import { store } from '../store';
+
     export default {
         data() {
             return {
+                store,
+                activeIndex: 0,
                 events: [
                     {
                         date: 'Jan 07, 2024',
                         time: '9:00 am - 5:00 pm',
                         name: 'Melbourne Coaching',
                         address: 'Cambrige, MA 02138, USA',
+                        link: '',
                     },
                     {
                         date: 'Jan 11, 2024',
                         time: '9:00 am - 5:00 pm',
                         name: 'New York Coaching',
                         address: 'Cambrige, MA 02138, USA',
+                        link: '',
                     },
                     {
                         date: 'Jan 21, 2024',
                         time: '9:00 am - 5:00 pm',
                         name: 'London Coaching',
                         address: 'Cambrige, MA 02138, USA',
+                        link: '',
                     },
                 ],
             }
         },
+        methods: {
+            handleClick() {
+                console.log('you want to read more');
+            }
+        }
     }
 </script>
 
@@ -36,7 +50,13 @@
                             <h4 class="text-capitalize text-serif">Upcoming events</h4> 
                         </div>
 
-                        <li v-for="(event,i) in events" :key="i" class="active px-5 py-3 d-flex gap-3 align-items-baseline">
+                        <li 
+                        v-for="(event,i) in events" 
+                        :key="i" 
+                        @click="activeIndex = store.goToClicked(activeIndex,i)"
+                        :class="activeIndex == i ? 'active':'' " 
+                        class="px-5 py-3 d-flex gap-3 align-items-baseline"
+                        >
                             <span class="event-date">
                                 <div class="event-day text-serif">{{ parseInt(event.date.substr(4,2))}}</div>
                                 <div class="event-month">{{ event.date.substr(0,3)+'. '+event.date.substr(8,4)}}</div>
@@ -50,7 +70,7 @@
                                 <p class="text-info mb-1">
                                     <font-awesome-icon icon="fa-solid fa-location-dot" class="text-secondary"/>
                                     {{ event.address }}</p>
-                                <a href="#">READ MORE</a>
+                                <app-read-more :link="event.link" @read-more="handleClick()"/>
                             </span>
                         </li>
 

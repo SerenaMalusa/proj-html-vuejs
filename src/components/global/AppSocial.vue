@@ -10,7 +10,7 @@
 <template>
     <div class="d-flex">        
         
-        <a v-for="(link,i) in links" :key="i" :href="link.link" :class="(colours == 'highlight') ? 'highlight-bg' : ''" class="text-center">
+        <a v-for="(link,i) in links" :key="i" :class="(colours == 'highlight') ? 'highlight-bg' : ''" class="text-center">
             <font-awesome-icon :icon="`fa-${link.kitClass} fa-${link.iconClass}`" />
         </a>
 

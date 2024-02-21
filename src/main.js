@@ -22,6 +22,7 @@ import AppSearchBar from './components/global/AppSearchBar.vue';
 import AppBackArrow from './components/global/AppBackArrow.vue';
 import AppButton from './components/global/AppButton.vue';
 import SectionTitle from './components/global/SectionTitle.vue';
+import AppReadMore from './components/global/AppReadMore.vue';
 
 // use createApp to create the const app then mount it
 const app = createApp(App);
@@ -32,6 +33,7 @@ app
     .component('AppSearchBar', AppSearchBar)
     .component('AppBackArrow', AppBackArrow)
     .component('AppButton', AppButton)
-    .component('SectionTitle', SectionTitle);
+    .component('SectionTitle', SectionTitle)
+    .component('AppReadMore', AppReadMore);
 
 app.mount('#app');

@@ -13,7 +13,7 @@ export const store = reactive ({
     
     },
 
-    // functions for sliders
+    // functions for sliders and shange on click
     goToNext(array,activeIndex) {
         activeIndex ++;
         if (activeIndex == array.length) activeIndex = 0;
@@ -22,6 +22,10 @@ export const store = reactive ({
     goToPrev(array,activeIndex) {
         activeIndex --;
         if (activeIndex < 0) activeIndex = array.length - 1;
+        return activeIndex;
+    },
+    goToClicked(activeIndex,index) {
+        activeIndex = index;
         return activeIndex;
     }
 });
