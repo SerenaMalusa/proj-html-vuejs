@@ -9,7 +9,32 @@
                 linkList:  [
                     {
                         title: 'About',
-                        extraComponent: 'AppSocial',
+                        extraComponent: {
+                            name: 'AppSocial',
+                            props: {
+                                links:[
+                                    {
+                                        socialName: 'linkedin',
+                                        kitClass: 'brands',
+                                        iconClass: 'linkedin-in',
+                                        link: '#',
+                                    },
+                                    {
+                                        socialName: 'facebook',
+                                        kitClass: 'brands',
+                                        iconClass: 'facebook-f',
+                                        link: '#',
+                                    },
+                                    {
+                                        socialName: 'twitter',
+                                        kitClass: 'brands',
+                                        iconClass: 'twitter',
+                                        link: '#',
+                                    },
+                                ],
+                                colours: 'highlight',
+                            }
+                        },
                         listItems: [
                             {
                                 icon: {
@@ -23,7 +48,7 @@
                     },
                     {
                         title: 'Twitter',
-                        extraComponent: '',
+                        extraComponent: {},
                         listItems: [
                             {
                                 icon: {
@@ -46,7 +71,7 @@
                     },
                     {
                         title: 'Important Links',
-                        extraComponent: '',
+                        extraComponent: {},
                         listItems: [
                             {
                                 icon: {
@@ -92,7 +117,10 @@
                     },
                     {
                         title: 'Contact me',
-                        extraComponent: 'AppSearchBar',
+                        extraComponent: {
+                            name: 'AppSearchBar',
+                            props: {},
+                        },
                         listItems: [
                             {   
                                 icon: {
@@ -146,7 +174,7 @@
 
                 <footer-list v-for="(link,i) in linkList" :key="i" :link="link">
                     <!-- <app-social></app-social> -->
-                    <component :is="link.extraComponent"></component>
+                    <component v-if="link.extraComponent.props" :is="link.extraComponent.name" :links="link.extraComponent.props.links" :colours="link.extraComponent.props.colours"></component>
                 </footer-list>
 
             </div>

@@ -13,18 +13,78 @@
                         name: 'Jason Bickford',
                         role: 'Founder and Executive Director',
                         quote: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio qui totam, fuga quaerat amet adipisci eum placeat officia praesentium.',
+                        social: [
+                            {
+                                socialName: 'linkedin',
+                                kitClass: 'brands',
+                                iconClass: 'linkedin-in',
+                                link: '#',
+                            },
+                            {
+                                socialName: 'facebook',
+                                kitClass: 'brands',
+                                iconClass: 'facebook-f',
+                                link: '#',
+                            },
+                            {
+                                socialName: 'twitter',
+                                kitClass: 'brands',
+                                iconClass: 'twitter',
+                                link: '#',
+                            },
+                        ],
                     },
                     {
                         imgName: 'h1-img-02.jpg',
-                        name: 'John Smith',
+                        name: 'Charlie Morningstar',
                         role: 'Founder and',
                         quote: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio qui totam, fuga quaerat amet adipisci eum placeat officia praesentium.',
+                        social: [
+                            {
+                                socialName: 'linkedin',
+                                kitClass: 'brands',
+                                iconClass: 'linkedin-in',
+                                link: '#',
+                            },
+                            {
+                                socialName: 'facebook',
+                                kitClass: 'brands',
+                                iconClass: 'facebook-f',
+                                link: '#',
+                            },
+                            {
+                                socialName: 'twitter',
+                                kitClass: 'brands',
+                                iconClass: 'twitter',
+                                link: '#',
+                            },
+                        ],
                     },
                     {
                         imgName: 'h1-img-03.jpg',
-                        name: 'Pinco Pallo',
+                        name: 'John Smith',
                         role: 'Founder and',
                         quote: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio qui totam, fuga quaerat amet adipisci eum placeat officia praesentium.',
+                        social: [
+                            {
+                                socialName: 'linkedin',
+                                kitClass: 'brands',
+                                iconClass: 'linkedin-in',
+                                link: '#',
+                            },
+                            {
+                                socialName: 'facebook',
+                                kitClass: 'brands',
+                                iconClass: 'facebook-f',
+                                link: '#',
+                            },
+                            {
+                                socialName: 'twitter',
+                                kitClass: 'brands',
+                                iconClass: 'twitter',
+                                link: '#',
+                            },
+                        ],
                     },
                 ],
                 activeIndex: 0,
@@ -79,7 +139,7 @@
 
                         <p class="text-info"> {{ founder.quote }}</p>
 
-                        <app-social />
+                        <app-social :links="founder.social"/>
 
                     </div>
                 </div>

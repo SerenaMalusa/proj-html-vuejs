@@ -12,9 +12,9 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 /* import specific icons  from the 3 free kits*/
 import { faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
 import {  } from '@fortawesome/free-regular-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 /* add icons to the library */
-library.add( faTwitter, faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars );
+library.add( faTwitter, faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars, faFacebookF, faLinkedinIn  );
 
 // import globall components
 import AppSocial from './components/global/AppSocial.vue';
