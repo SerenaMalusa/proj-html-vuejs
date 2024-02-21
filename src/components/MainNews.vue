@@ -71,9 +71,10 @@
     <section class="section-padding">
             <div class="container-l">
 
-                <img @click="scrollLeft()" class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
-                <img @click="scrollRight()" class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
-                
+                <!-- <img @click="scrollLeft()" class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
+                <img @click="scrollRight()" class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow"> -->
+                <app-slider-arrows @right-click="scrollLeft" @left-click="scrollRight"/>
+
                 <div class="container-s">
                     <section-title 
                     :title="title"
