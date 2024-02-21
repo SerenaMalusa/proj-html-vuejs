@@ -53,6 +53,19 @@
                     <h6 class="text-serif">{{ person.name }}</h6>
                     <p>{{ person.quote }}</p>
 
+                    <div class="col-4 d-flex justify-content-between align-items-center mx-auto">
+                        <span>{{ `0${i+1}` }}</span>
+                        <div class="bar base-bar flex-grow-1 mx-2 d-flex">
+                            <div 
+                            v-for="(person,index) in testimonials" 
+                            :key="index"
+                            :class="index == i ? 'active' : ''"
+                            class="bar progress-bar flex-grow-1"
+                            ></div>
+                        </div>
+                        <span>{{ '0'+testimonials.length }}</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -98,6 +111,19 @@
                 width: 100%;
                 height: auto;
                 object-fit: contain;
+            }
+        }
+
+        .bar {
+            border-radius: 25px;
+            height: 3px;
+            
+            &.base-bar {
+                background-color: $testimonial-bar-bg;
+            }
+
+            .active {
+                background-color: $testimonia-bar-higlight;
             }
         }
     }
