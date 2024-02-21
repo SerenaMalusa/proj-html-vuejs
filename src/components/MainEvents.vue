@@ -1,6 +1,29 @@
 <script>
     export default {
-        
+        data() {
+            return {
+                events: [
+                    {
+                        date: 'Jan 07, 2024',
+                        time: '9:00 am - 5:00 pm',
+                        name: 'Melbourne Coaching',
+                        address: 'Cambrige, MA 02138, USA',
+                    },
+                    {
+                        date: 'Jan 11, 2024',
+                        time: '9:00 am - 5:00 pm',
+                        name: 'New York Coaching',
+                        address: 'Cambrige, MA 02138, USA',
+                    },
+                    {
+                        date: 'Jan 21, 2024',
+                        time: '9:00 am - 5:00 pm',
+                        name: 'London Coaching',
+                        address: 'Cambrige, MA 02138, USA',
+                    },
+                ],
+            }
+        },
     }
 </script>
 
@@ -13,46 +36,25 @@
                             <h4 class="text-capitalize text-serif">Upcoming events</h4> 
                         </div>
 
-                        <li class="active px-5 py-3 d-flex gap-3 align-items-baseline">
+                        <li v-for="(event,i) in events" :key="i" class="active px-5 py-3 d-flex gap-3 align-items-baseline">
                             <span class="event-date">
-                                <div class="event-day text-serif">07</div>
-                                <div class="event-month">Jan. 2024</div>
+                                <div class="event-day text-serif">{{ parseInt(event.date.substr(4,2))}}</div>
+                                <div class="event-month">{{ event.date.substr(0,3)+'. '+event.date.substr(8,4)}}</div>
                             </span>
 
                             <span class="event-info">
-                                <h6 class="h6 text-serif">Lorem</h6>
-                                <p class="text-info mb-1">Lorem ipsum dolor sit amet.</p>
-                                <p class="text-info mb-1">Lorem ipsum dolor sit amet.</p>
+                                <h6 class="h6 text-serif">{{ event.name }}</h6>
+                                <p class="text-info mb-1">
+                                    <font-awesome-icon icon="fa-solid fa-clock" class="text-secondary" />
+                                    {{ event.time + ', ' + event.date}}</p>
+                                <p class="text-info mb-1">
+                                    <font-awesome-icon icon="fa-solid fa-location-dot" class="text-secondary"/>
+                                    {{ event.address }}</p>
                                 <a href="#">READ MORE</a>
                             </span>
                         </li>
 
-                        <li class="px-5 py-3 d-flex gap-3 align-items-baseline">
-                            <span class="event-date">
-                                <div class="event-day text-serif">07</div>
-                                <div class="event-month">Jan. 2024</div>
-                            </span>
-
-                            <span class="event-info">
-                                <h6 class="h6 text-serif">Lorem</h6>
-                                <p class="text-info mb-1">Lorem ipsum dolor sit amet.</p>
-                                <p class="text-info mb-1">Lorem ipsum dolor sit amet.</p>
-                                <a href="#">READ MORE</a>
-                            </span>
-                        </li>
-                        <li class="px-5 py-3 d-flex gap-3 align-items-baseline">
-                            <span class="event-date">
-                                <div class="event-day text-serif">07</div>
-                                <div class="event-month">Jan. 2024</div>
-                            </span>
-
-                            <span class="event-info">
-                                <h6 class="h6 text-serif">Lorem</h6>
-                                <p class="text-info mb-1">Lorem ipsum dolor sit amet.</p>
-                                <p class="text-info mb-1">Lorem ipsum dolor sit amet.</p>
-                                <a href="#">READ MORE</a>
-                            </span>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -84,6 +86,12 @@
 
                 li {
                     border-top: 1px solid #f1f1f1;
+
+                    &:hover {
+                        h6 {
+                            color: $secondary-text;
+                        }
+                    }
 
                     &.active {
                         background-color: $highlight-bg;
