@@ -5,6 +5,7 @@
     import MainSpecialties from './MainSpecialties.vue';
     import MainFounders from './MainFounders.vue';
     import MainEvents from './MainEvents.vue';
+    import MainLeader from './MainLeader.vue';
 
     export default {
         components: {
@@ -12,6 +13,7 @@
             MainSpecialties,
             MainFounders,
             MainEvents,
+            MainLeader,
         }
     }
 </script>
@@ -35,20 +37,8 @@
         <main-events />
 
         <!-- SECTION LEADER -->
-        <section class="section-padding" id="leader">
-            <div class="container-l">
-                <div class="container-s d-flex debug">
+        <main-leader />
 
-                    <div class="col-6">
-                        <h3 class="text-serif">Lorem</h3>
-                        <p class="text-info mb-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis quas dolorum omnis eos totam labore vero sint eligendi maxime? Hic enim ea quidem et commodi illum perferendis dignissimos laborum!</p>
-                        <a href="#">READ MORE</a>
-                    </div>
-                    <div class="col-6 debug"></div>
-                </div>
-            </div>
-        </section>
-        <!-- END SECTION LEADER -->
 
         <!-- SECTION NEWS -->
         <section class="section-padding" id="news">
@@ -116,10 +106,6 @@
             padding: calc($base-space * 5) 0;
         }
 
-    }
-
-    #leader {
-        background-color: $highlight-bg;
     }
 
     #news {
