@@ -21,7 +21,7 @@
     @click="$emit('button-clicked', text);"
     class="btn"
     >
-        <a class="text-uppercase" href="#"> {{ text }}</a>
+        <a class="text-uppercase"> {{ text }}</a>
         <img class="arrow-right" src="../../assets/svg/svg-6.svg" alt="right arrow">
     </button>
 </template>

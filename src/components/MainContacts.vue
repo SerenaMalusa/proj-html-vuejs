@@ -8,12 +8,27 @@
                     'Norway',
                     'Australia',
                 ],
+                inputName: '',
+                inputEmail: '',
+                inputMessage: '',
             }
         },
         methods: {
             handleClick() {
                 console.log('you want to read more');
             },
+            printMessage() {
+                // if the user did not enter an email or a message do nothing
+                while(this.inputEmail == '' || this.inputMessage == '') return;
+
+                console.log(
+`received message:
+'${this.inputMessage}'
+from: ${this.inputName};
+email: ${this.inputEmail}.`
+                );
+
+            }
         },
     }
 </script>
@@ -44,7 +59,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 p-3 debug">
+                    <div class="col-6 p-3 ms-2">
                         
                         <section-title 
                         title="Contact us"
@@ -55,6 +70,13 @@
                         :isTextCentered="false"
                         />
 
+                        <div class="form d-flex flex-wrap justify-content-between gap-3">
+                            <input v-model="inputName" class="text-info flex-grow-1" name="name-input" placeholder="Your name" type="text">
+                            <input v-model="inputEmail" class="text-info flex-grow-1" name="mail-input" placeholder="Your email" type="email" required>
+                            <input v-model="inputMessage" class="text-info col-12" id="message-input" name="message-input" placeholder="Write a message..." type="text" required>
+                        </div>
+
+                        <app-button @button-clicked="printMessage" buttonType="secondary" text="send" class="mt-3"/>
                     </div>
                 </div>
 
@@ -116,6 +138,19 @@
                         top: calc($base-space * 0.7);
                     }
                 }
+            }
+        }
+    }
+
+    .form {
+        input {
+            border: none;
+            border-bottom: 1px solid black;
+            background: none;
+            font-family: inherit;
+
+            &#message-input {
+                height: 40px;
             }
         }
     }
