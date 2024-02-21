@@ -9,6 +9,7 @@
     import MainNews from './MainNews.vue';
     import MainTestimonials from './MainTestimonials.vue';
     import MainVideo from './MainVideo.vue';
+    import MainContacts from './MainContacts.vue';
 
     export default {
         components: {
@@ -20,6 +21,7 @@
             MainNews,
             MainTestimonials,
             MainVideo,
+            MainContacts,
         }
     }
 </script>
@@ -53,6 +55,9 @@
 
         <!-- SECTION VIDEO -->
         <main-video />
+
+        <!-- SECTION CONTACTS -->
+        <main-contacts />
 
     </div>
 </template>
