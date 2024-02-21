@@ -55,7 +55,11 @@
                     <img @click="activeIndex = store.goToNext(slides,activeIndex)" class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
                     <img @click="activeIndex = store.goToPrev(slides,activeIndex)" class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
                 </div> -->
-                <app-slider-arrows @right-click="activeIndex = store.goToNext(slides,activeIndex)" @left-click="activeIndex = store.goToPrev(slides,activeIndex)"/>
+                <app-slider-arrows 
+                :isBlack="true"
+                @right-click="activeIndex = store.goToNext(slides,activeIndex)" 
+                @left-click="activeIndex = store.goToPrev(slides,activeIndex)"
+                />
     
                 <div class="container-s">
     

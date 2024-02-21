@@ -108,6 +108,8 @@
                     border-top: 1px solid #f1f1f1;
 
                     &:hover {
+                        cursor: pointer;
+                        
                         h6 {
                             color: $secondary-text;
                         }
