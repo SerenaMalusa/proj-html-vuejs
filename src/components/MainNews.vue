@@ -24,7 +24,7 @@
                         category: 'empathy',
                         date: 'May 5, 2019',
                         author: 'Amanda Doe',
-                        title: 'new business day',
+                        title: 'team Building',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing.',
                         link: '#',
                     },
@@ -33,7 +33,7 @@
                         category: 'business leading',
                         date: 'May 5, 2019',
                         author: 'Amanda Doe',
-                        title: 'team Building',
+                        title: 'new business day',
                         text: 'Lorem ipsum dolor sit amet consectetur adipisicing.',
                         link: '#',
                     },
@@ -70,6 +70,8 @@
 <template>
     <section class="section-padding">
             <div class="container-l">
+
+                <img class="section-deco" src="../assets/svg/svg-4.svg" alt="decoration" >  
 
                 <!-- <img @click="scrollLeft()" class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
                 <img @click="scrollRight()" class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow"> -->
@@ -123,6 +125,11 @@
     section {
         .container-l {
             position: relative;
+
+            .section-deco {
+                position: absolute;
+                top: calc(-9 * $base-space);
+            }
         }
         
         span {

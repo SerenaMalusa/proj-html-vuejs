@@ -7,6 +7,7 @@
     import MainEvents from './MainEvents.vue';
     import MainLeader from './MainLeader.vue';
     import MainNews from './MainNews.vue';
+    import MainTestimonials from './MainTestimonials.vue';
 
     export default {
         components: {
@@ -16,6 +17,7 @@
             MainEvents,
             MainLeader,
             MainNews,
+            MainTestimonials,
         }
     }
 </script>
@@ -43,6 +45,9 @@
 
         <!-- SECTION NEWS -->
         <main-news />
+
+        <!-- SECTION TESTIMONIALS -->
+        <main-testimonials />
 
     </div>
 </template>
