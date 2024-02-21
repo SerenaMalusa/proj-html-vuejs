@@ -1,82 +1,33 @@
 <script>
 
+  // import Axios
+  import axios from 'axios';
+
+  // import store
+  import { store } from '../store';
+
+  // import components
   import HeaderNavBar from './HeaderNavBar.vue';
 
   export default {
     data () {
       return {
-        menuLinks: [
-          {
-            link: '#',
-            text: 'Home',
-            icon: {
-              kitClass: '',
-              iconClass: '',
-            },
-          },
-          {
-            link: '#',
-            text: 'Pages',
-            icon: {
-              kitClass: '',
-              iconClass: '',
-            },
-          },
-          {
-            link: '#',
-            text: 'Blog',
-            icon: {
-              kitClass: '',
-              iconClass: '',
-            },
-          },
-          {
-            link: '#',
-            text: 'Shop',
-            icon: {
-              kitClass: '',
-              iconClass: '',
-            },
-          },
-          {
-            link: '#',
-            text: 'Events',
-            icon: {
-              kitClass: '',
-              iconClass: '',
-            },
-          },
-          {
-            link: '#',
-            text: 'Elements',
-            icon: {
-              kitClass: '',
-              iconClass: '',
-            },
-          },
-          {
-            link: '#',
-            text: '',
-            icon: {
-              kitClass: 'solid',
-              iconClass: 'magnifying-glass',
-            },
-          },
-          {
-            link: '#',
-            text: '',
-            icon: {
-              kitClass: 'solid',
-              iconClass: 'bars',
-            },
-          },
-        ],
-        
+        store,
+        menuLinks: [], 
+        links: [],       
       }
     },
-    components: {
-      HeaderNavBar,
-    }
+    components: { HeaderNavBar },
+    methods: {
+      fetchData() {
+        axios.get( store.apiUri + 'headerLinks').then((res) => {
+          this.menuLinks = res.data;
+        });
+      }
+    },
+    created() {
+      this.fetchData();
+    },
   }
 </script>
 

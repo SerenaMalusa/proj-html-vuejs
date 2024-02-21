@@ -1,156 +1,19 @@
 <script>
 
+    // import Axios
+    import axios from 'axios';
+
+    // import store 
+    import {store} from '../store';
+
     // import components
     import FooterList from './FooterList.vue';
 
     export default {
         data () {
             return {
-                linkList:  [
-                    {
-                        title: 'About',
-                        extraComponent: {
-                            name: 'AppSocial',
-                            props: {
-                                links:[
-                                    {
-                                        socialName: 'linkedin',
-                                        kitClass: 'brands',
-                                        iconClass: 'linkedin-in',
-                                        link: '#',
-                                    },
-                                    {
-                                        socialName: 'facebook',
-                                        kitClass: 'brands',
-                                        iconClass: 'facebook-f',
-                                        link: '#',
-                                    },
-                                    {
-                                        socialName: 'twitter',
-                                        kitClass: 'brands',
-                                        iconClass: 'twitter',
-                                        link: '#',
-                                    },
-                                ],
-                                colours: 'highlight',
-                            }
-                        },
-                        listItems: [
-                            {
-                                icon: {
-                                    kitClass: '',
-                                    iconClass: '',
-                                },
-                                text: 'We creted Everlead to effectively become the stepping stone towards meeting all your goals & achieving business success',  
-                                link: '',
-                            },
-                        ]
-                    },
-                    {
-                        title: 'Twitter',
-                        extraComponent: {},
-                        listItems: [
-                            {
-                                icon: {
-                                    kitClass: 'brands',
-                                    iconClass: 'twitter',
-                                },
-                                text: `@alisadadm Hi @alisadadm can you please submit a ticket at..`,  
-                                link: '',
-                            },
-                            {
-                                icon: {
-                                    kitClass: 'brands',
-                                    iconClass: 'twitter',
-                                },
-                                text: `@HenrySefaBoaky check out our there Gloia wich has all the necessary elements to build a multi vendor marketplace
-                                https://t.co/c9BIYxZBlI`,  
-                                link: '',
-                            },
-                        ]
-                    },
-                    {
-                        title: 'Important Links',
-                        extraComponent: {},
-                        listItems: [
-                            {
-                                icon: {
-                                    kitClass: '',
-                                    iconClass: '',
-                                },
-                                text: 'About me',  
-                                link: '#',
-                            },
-                            {
-                                icon: {
-                                    kitClass: '',
-                                    iconClass: '',
-                                },
-                                text: 'About us',  
-                                link: '#',
-                            },
-                            {
-                                icon: {
-                                    kitClass: '',
-                                    iconClass: '',
-                                },
-                                text: 'Lenguage packs',  
-                                link: '#',
-                            },
-                            {
-                                icon: {
-                                    kitClass: '',
-                                    iconClass: '',
-                                },
-                                text: 'Become a coach',  
-                                link: '#',
-                            },
-                            {
-                                icon: {
-                                    kitClass: '',
-                                    iconClass: '',
-                                },
-                                text: 'Monthly events',  
-                                link: '#',
-                            },
-                        ]
-                    },
-                    {
-                        title: 'Contact me',
-                        extraComponent: {
-                            name: 'AppSearchBar',
-                            props: {},
-                        },
-                        listItems: [
-                            {   
-                                icon: {
-                                    kitClass: 'solid',
-                                    iconClass: 'location-dot',
-                                },
-                                text: '457 BigBlue Street, NY 10013',  
-                                link: '#',
-                            },
-                            {
-                                icon: {
-                                    kitClass: 'solid',
-                                    iconClass: 'phone',
-                                },
-                                text: '(315) 5512 - 2579',  
-                                link: '#',
-                            },
-                            {
-                                icon: {
-                                    kitClass: 'solid',
-                                    iconClass: 'envelope',
-                                },
-                                text: 'everlead@mikado.com',  
-                                link: '#',
-                            },
-                        ]
-                    },
-
-                ],
-
+                store,
+                linkList: [],
             }
         },
         components: {
@@ -162,7 +25,15 @@
                 console.log(`l'utente con email ${inputEmail} vuole iscriversi alla newsletter`)
             
             },
+            fetchData() {
+                axios.get( store.apiUri + 'footerLinks').then((res) => {
+                this.linkList = res.data;
+                });
+            }
         },
+        created() {
+            this.fetchData();
+        }
     }
 </script>
 

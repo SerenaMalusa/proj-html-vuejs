@@ -1,6 +1,10 @@
 import { reactive } from 'vue';
 
 export const store = reactive ({
+
+    // mocking api 
+    apiUri: 'http://localhost:3000/',
+
     // function to get the dynamic path 
     getPath(item) {
 
@@ -27,5 +31,5 @@ export const store = reactive ({
     goToClicked(activeIndex,index) {
         activeIndex = index;
         return activeIndex;
-    }
+    },
 });
