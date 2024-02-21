@@ -88,6 +88,7 @@
     @use '../styles/partials/mixins.scss' as *;
 
     section {
+        height: 100vh;
         background-image: url(../assets/img/h1-img-09.jpg);
         background-size: cover;
         background-repeat: no-repeat;
