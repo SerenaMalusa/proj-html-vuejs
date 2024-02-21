@@ -10,11 +10,11 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 /* import specific icons  from the 3 free kits*/
-import { faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars, faClock, faUser } from '@fortawesome/free-solid-svg-icons';
 import {  } from '@fortawesome/free-regular-svg-icons';
 import { faTwitter, faFacebookF, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 /* add icons to the library */
-library.add( faTwitter, faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars, faFacebookF, faLinkedinIn, faClock );
+library.add( faTwitter, faLocationDot, faPhone, faEnvelope, faMagnifyingGlass, faBars, faFacebookF, faLinkedinIn, faClock, faUser );
 
 // import globall components
 import AppSocial from './components/global/AppSocial.vue';
