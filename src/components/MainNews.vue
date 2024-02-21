@@ -110,6 +110,7 @@
 
                             <h6 class="text-serif text-capitalize mt-2">{{ article.title }}</h6>
                             <p class="text-info">{{ article.text }}</p>
+                            
                             <app-read-more :link="article.link" @read-more="handleClick"/>                           
                         </div>
                         
