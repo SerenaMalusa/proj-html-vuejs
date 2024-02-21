@@ -18,7 +18,7 @@
 
         <h6 class="text-serif">{{ link.title }}</h6>
         <div class="divider"></div>
-        <div v-for="listItem in link.listItems" class="d-flex align-items-start">
+        <div v-for="(listItem,i) in link.listItems" :key="i" class="d-flex align-items-start">
             <div>
                 <font-awesome-icon v-if="listItem.icon.kitClass" :icon="`fa-${listItem.icon.kitClass} fa-${listItem.icon.iconClass}`" class="icon"/>
             </div>

@@ -144,7 +144,7 @@
 
                 </div> -->
 
-                <footer-list v-for="link in linkList" :link="link">
+                <footer-list v-for="(link,i) in linkList" :key="i" :link="link">
                     <!-- <app-social></app-social> -->
                     <component :is="link.extraComponent"></component>
                 </footer-list>

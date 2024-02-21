@@ -52,7 +52,7 @@
                 <img src="../assets/img/rev-slider-main-home-img-03.jpg" alt="#">
             </figure> -->
 
-            <figure v-for="slide in slides" :class="(slide != activeSlide) ? 'd-none' : ''">
+            <figure v-for="(slide,i) in slides" :key="i" :class="(slide != activeSlide) ? 'd-none' : ''">
                 <img :src="getImgPath(slide)" alt="#">
             </figure>
             
@@ -71,7 +71,8 @@
                     </div> -->
 
                     <div 
-                    v-for="slide in slides" 
+                    v-for="(slide,i) in slides" 
+                    :key="i"
                     :class="(slide != activeSlide) ? 'd-none' : ''"
                     class="col-6 slide-content"
                     >

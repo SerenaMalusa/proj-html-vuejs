@@ -26,6 +26,7 @@
                 <!-- <li class="text-uppercase ms-4">Lorem</li> -->
                 <li 
                 v-for="(link, i) in menu"
+                :key="i"
                 @mouseenter="activateLink(i)"
                 class="text-uppercase ms-4 d-flex align-items-end"
                 > 
