@@ -145,7 +145,7 @@ email: ${this.inputEmail}.`
     .form {
         input {
             border: none;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid $form-border;
             background: none;
             font-family: inherit;
 

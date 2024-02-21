@@ -10,6 +10,7 @@
     import MainTestimonials from './MainTestimonials.vue';
     import MainVideo from './MainVideo.vue';
     import MainContacts from './MainContacts.vue';
+    import MainLogos from './MainLogos.vue';
 
     export default {
         components: {
@@ -22,6 +23,7 @@
             MainTestimonials,
             MainVideo,
             MainContacts,
+            MainLogos,
         }
     }
 </script>
@@ -58,6 +60,9 @@
 
         <!-- SECTION CONTACTS -->
         <main-contacts />
+
+        <!-- SECTION LOGOS -->
+        <main-logos />
 
     </div>
 </template>
