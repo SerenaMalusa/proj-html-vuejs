@@ -30,6 +30,13 @@
                 activeIndex: 0,
             }
         },
+        // methods: {
+        //     goNext() {
+        //         this.activeIndex = store.goToNext(this.founders,this.activeIndex);
+        //         // this.activeIndex ++;
+
+        //     }
+        // }
     }
 </script>
 
@@ -42,7 +49,7 @@
 
             <div class="container-s">
 
-                <div class="member d-flex">
+                <div class="member d-flex align-items-start">
                     <figure class="member_img col-7 mb-0">
                         <!-- <img src="../assets/img/h1-blog-img-04.jpg" alt="founders member 1"> -->
                         <img 
@@ -53,12 +60,26 @@
                         >
 
                         <div class="arrows">
-                            <img class="arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
-                            <img class="arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
+                            <img @click="activeIndex = store.goToPrev(founders,activeIndex)" class="arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
+                            <img @click="activeIndex = store.goToNext(founders,activeIndex)" class="arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
                         </div>
                     </figure>
 
-                    <div class="member-info col-6 my-5">
+                    <div v-for="(founder,i) in founders" :key="i" :class="i == activeIndex ? '' : 'd-none'" class="member-info col-7 my-5">
+                        
+                        <section-title                         
+                        :title="founder.name"
+                        :text="founder.role"
+                        titleSize="h3"
+                        pRem="0.8"
+                        :hasFinishDot="false"
+                        :hasDivider="true"
+                        :isTextCentered="false"
+                        />
+
+                        <p class="text-info"> {{ founder.quote }}</p>
+
+                        <app-social />
 
                     </div>
                 </div>
@@ -96,6 +117,9 @@
                 position: absolute;
                 bottom: 0;
     
+                &:hover {
+                    cursor: pointer;
+                }
                 .arrow {
                     height: $base-space;
                 }
@@ -107,6 +131,7 @@
         }
 
         .member-info {
+            padding: calc($base-space * 4) calc($base-space * 3);
             background-color:  $highlight-bg;
             position: relative;
             left: calc($base-space * -5);

@@ -4,6 +4,7 @@
         title: String,
         text: String,
         titleSize: String,
+        pRem: String, 
         hasFinishDot: Boolean,
         hasDivider: Boolean,
         isTextCentered: Boolean,
@@ -14,7 +15,7 @@
 <template>
     <div :class="(isTextCentered) ? 'text-center' : ''">
         <h2 :class="titleSize" class="text-serif">{{ title }}<b v-if="hasFinishDot" class="text-secondary">.</b></h2>
-        <p class="text-info">{{ text }}</p>
+        <p :style="pRem ? `font-size: ${parseFloat(pRem)}rem;`: ''" class="text-info">{{ text }}</p>
         <div v-if="hasDivider" :class="(isTextCentered) ? 'centered' : ''" class="divider"></div>
     </div>
 </template>

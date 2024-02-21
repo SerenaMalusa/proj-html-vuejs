@@ -1,7 +1,12 @@
 <script>
+
+    // import store
+    import { store } from '../store';
+
     export default {
         data() {
             return {
+                store,
                 slides: [
                     {
                         title: 'Our team',
@@ -26,18 +31,6 @@
             }
         },
         methods: {
-            getImgPath(slide) {
-                const url = new URL ('../assets/img/' + slide.imgName, import.meta.url);
-                return url;
-            },
-            goToNextSlide() {
-                this.activeIndex ++;
-                if (this.activeIndex == this.slides.length) this.activeIndex = 0;
-            },
-            goToPrevSlide() {
-                this.activeIndex --;
-                if (this.activeIndex < 0) this.activeIndex = this.slides.length - 1;
-            },
             printClick(buttonText) {
                 console.log('the '+buttonText+' button was clicked!');
             }
@@ -53,14 +46,14 @@
             </figure> -->
 
             <figure v-for="(slide,i) in slides" :key="i" :class="(slide != activeSlide) ? 'd-none' : ''">
-                <img :src="getImgPath(slide)" alt="#">
+                <img :src="store.getPath(slide)" alt="#">
             </figure>
             
             <div class="container-l">
     
-                <div>
-                    <img @click="goToNextSlide()" class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
-                    <img @click="goToPrevSlide()" class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
+                <div class="arrows">
+                    <img @click="activeIndex = store.goToNext(slides,activeIndex)" class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
+                    <img @click="activeIndex = store.goToPrev(slides,activeIndex)" class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
                 </div>
     
                 <div class="container-s">
@@ -121,6 +114,7 @@
                 height: 100%;
                 object-fit: cover;
             }
+
         }
 
         .container-l {

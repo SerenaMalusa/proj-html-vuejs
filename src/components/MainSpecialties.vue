@@ -1,7 +1,12 @@
 <script>
+
+    // import store
+    import { store } from '../store';
+
     export default {
         data() {
             return {
+                store,
                 sectionTitle: 'Our specialties',
                 sectionText: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas!',
                 skills: [
@@ -26,12 +31,6 @@
                         imgName: 'svg-3.svg',
                     },
                 ],
-            }
-        },
-        methods: {
-            getSvgPath(item) {
-                const url = new URL ('../assets/svg/' + item.imgName, import.meta.url);
-                return url;
             }
         },
     }
@@ -64,7 +63,7 @@
                         </div> -->
 
                         <div v-for="(skill,i) in skills" :key="i" class="skill text-center col-3">
-                            <img class="mb-4" :src="getSvgPath(skill)" alt="#">
+                            <img class="mb-4" :src="store.getPath(skill)" alt="#">
                             <h6 class="text-serif">{{ skill.title }}</h6>
                             <p class="text-info">{{ skill.text }}</p>
                         </div>
