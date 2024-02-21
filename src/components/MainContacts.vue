@@ -28,6 +28,10 @@ from: ${this.inputName};
 email: ${this.inputEmail}.`
                 );
 
+                this.inputName = '';
+                this.inputEmail = '';
+                this.inputMessage = '';
+
             }
         },
     }
