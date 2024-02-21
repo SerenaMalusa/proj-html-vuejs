@@ -6,6 +6,7 @@
     import MainFounders from './MainFounders.vue';
     import MainEvents from './MainEvents.vue';
     import MainLeader from './MainLeader.vue';
+    import MainNews from './MainNews.vue';
 
     export default {
         components: {
@@ -14,6 +15,7 @@
             MainFounders,
             MainEvents,
             MainLeader,
+            MainNews,
         }
     }
 </script>
@@ -39,57 +41,9 @@
         <!-- SECTION LEADER -->
         <main-leader />
 
-
         <!-- SECTION NEWS -->
-        <section class="section-padding" id="news">
-            <div class="container-l">
+        <main-news />
 
-                <img class="slider-arrow arrow-right" src="../assets/svg/svg-6.svg" alt="right arrow">
-                <img class="slider-arrow arrow-left" src="../assets/svg/svg-6.svg" alt="left arrow">
-                
-                <div class="container-s">
-                    <div class="section-title text-center">
-                        <h2 class="text-serif h3 mb-0">Lorem</h2>
-                        <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, neque? Unde.</p>
-                    </div>
-
-                    <div class="d-flex justify-content-between gap-4">
-                        <div>
-                            <figure>
-                                <img src="../assets/img/h1-blog-img-02.jpg" alt="#">
-                                <span>Business Leading</span>
-                            </figure>
-
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                            <a href="#">READ MORE</a>                            
-                        </div>
-                        
-                        <div>
-                            <figure>
-                                <img src="../assets/img/h1-blog-img-02.jpg" alt="#">
-                                <span>Business Leading</span>
-                            </figure>
-
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                            <a href="#">READ MORE</a>                            
-                        </div>
-                        <div>
-                            <figure>
-                                <img src="../assets/img/h1-blog-img-02.jpg" alt="#">
-                                <span>Business Leading</span>
-                            </figure>
-
-                            <h6 class="text-serif">Lorem</h6>
-                            <p class="text-info">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                            <a href="#">READ MORE</a>                            
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
     </div>
 </template>
 
@@ -106,29 +60,6 @@
             padding: calc($base-space * 5) 0;
         }
 
-    }
-
-    #news {
-        .container-l {
-            position: relative;
-        }
-
-        figure {
-            position: relative;
-
-            span {
-                padding: 8px 10px;
-                background-color: $secondary-bg;
-                color: #fafafa;
-                font-size: 0.8rem;
-
-                position: absolute;
-                bottom: -10px;
-                right: 10px;
-            }
-
-        }
-        
     }
 
 </style>

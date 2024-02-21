@@ -23,7 +23,12 @@
                     },
                 ],
             }
-        }
+        },
+        methods: {
+            handleClick() {
+                console.log('you want to read more');
+            }
+        },
     }
 </script>
 
@@ -44,7 +49,7 @@
 
                         <p class="text-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque reiciendis quas dolorum omnis eos totam labore vero sint eligendi maxime? Hic enim ea quidem et commodi illum perferendis dignissimos laborum!</p>
                         
-                        <app-read-more :link="link" @read-more="handleClick()"/>
+                        <app-read-more :link="link" @read-more="handleClick"/>
                     </div>
 
                     <div class="col-6 d-flex flex-column align-items-stretch pt-4">
