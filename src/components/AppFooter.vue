@@ -27,7 +27,7 @@
             },
             fetchData() {
                 axios.get( store.apiUri + 'footerLinks').then((res) => {
-                this.linkList = res.data;
+                    this.linkList = res.data;
                 });
             }
         },
