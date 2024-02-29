@@ -21,6 +21,7 @@
                         name: 'Motivation',
                         perc: '83',
                     },
+                    
                 ],
             }
         },
